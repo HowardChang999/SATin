@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C71383EDF12A4F92D758E65 /* offline_dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = A1FB88841270942D554DD3A3 /* offline_dictionary.json */; };
+		168D80AEDB585CD48B33251F /* PDFImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681C7E15C46A57B4F6007298 /* PDFImportService.swift */; };
+		19C144FE3C9E25B15EEBDD07 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F705215B079F65651E584EAB /* TranslationService.swift */; };
+		1EAFA748B18CFF551AB7DF66 /* VocabularyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC16A107B5C5D8F81C09AE34 /* VocabularyRepository.swift */; };
+		425C47DA6A0A20DF1FC4C8C9 /* VocabularyExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD885AB30C3B577F135DEF3 /* VocabularyExporter.swift */; };
+		4A15139F4A834CEE4EFE9CC4 /* PracticeSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63600209391156029124E3 /* PracticeSessionViewModel.swift */; };
+		52C1A7281C3B4810490B24C9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F15806E411D96434EC567A /* HomeView.swift */; };
+		68602EE2D1CD11B9C3437039 /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1451DC360721DEF4A1AFE4 /* DictionaryService.swift */; };
+		70137E878FEE1522758E6164 /* SATinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8FBD6EC701A58B3E276846 /* SATinApp.swift */; };
+		792E6F93A1D48362CC5351BD /* SecondaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFEC9CC8CE980DDE31ED704 /* SecondaryViews.swift */; };
+		8059C0D8554C5687A0D18E2D /* PracticeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62336C5EE6973F4029EF564 /* PracticeViews.swift */; };
+		895360852FC085EC0062214B /* ImportReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895360842FC085EC0062214B /* ImportReviewView.swift */; };
+		895360872FC0B6F30062214B /* PracticeSummaryAnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895360862FC0B6F30062214B /* PracticeSummaryAnalyticsService.swift */; };
+		895360892FC0B7200062214B /* QuestionExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895360882FC0B7200062214B /* QuestionExporter.swift */; };
+		B1B0B62B062152BFF58DAA8F /* DomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEC2D89748DD76320B6375 /* DomainModels.swift */; };
+		BF2324683FA7DFF2F6A47641 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C6FCF7AB03C1B1600F3C0A /* LibraryView.swift */; };
+		D4325D18D50A4B348ADE9B28 /* SATinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A488BA70F29414ED70C56 /* SATinTests.swift */; };
+		D4600834163D688D35DBC742 /* RootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F147FB2E97D7EC69DDCE5DD /* RootContainerView.swift */; };
+		E68B3532EA4F59A115E362A9 /* CommonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0995BF7B3BB1CF9B205C3A6 /* CommonViews.swift */; };
+		F43E03DB169B7291019D11C1 /* PracticeScoringService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD205D019EA83782001654F0 /* PracticeScoringService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B54E1CF92728C111724B5B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2153582FD1C68EA7417BE0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CE36F8785CAA8E741F9BEDF;
+			remoteInfo = SATin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BD885AB30C3B577F135DEF3 /* VocabularyExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyExporter.swift; sourceTree = "<group>"; };
+		1F8AF698CB12A65896BC39A8 /* SATinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SATinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		334A488BA70F29414ED70C56 /* SATinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATinTests.swift; sourceTree = "<group>"; };
+		5F147FB2E97D7EC69DDCE5DD /* RootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainerView.swift; sourceTree = "<group>"; };
+		681C7E15C46A57B4F6007298 /* PDFImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFImportService.swift; sourceTree = "<group>"; };
+		69F15806E411D96434EC567A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		69FEC2D89748DD76320B6375 /* DomainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModels.swift; sourceTree = "<group>"; };
+		6D8FBD6EC701A58B3E276846 /* SATinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATinApp.swift; sourceTree = "<group>"; };
+		6E63600209391156029124E3 /* PracticeSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSessionViewModel.swift; sourceTree = "<group>"; };
+		85C6FCF7AB03C1B1600F3C0A /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		895360842FC085EC0062214B /* ImportReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportReviewView.swift; sourceTree = "<group>"; };
+		895360862FC0B6F30062214B /* PracticeSummaryAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSummaryAnalyticsService.swift; sourceTree = "<group>"; };
+		895360882FC0B7200062214B /* QuestionExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionExporter.swift; sourceTree = "<group>"; };
+		A0995BF7B3BB1CF9B205C3A6 /* CommonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViews.swift; sourceTree = "<group>"; };
+		A1FB88841270942D554DD3A3 /* offline_dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = offline_dictionary.json; sourceTree = "<group>"; };
+		BD205D019EA83782001654F0 /* PracticeScoringService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeScoringService.swift; sourceTree = "<group>"; };
+		C465D74E8D2A42361022480C /* SATin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SATin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1451DC360721DEF4A1AFE4 /* DictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryService.swift; sourceTree = "<group>"; };
+		DC16A107B5C5D8F81C09AE34 /* VocabularyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyRepository.swift; sourceTree = "<group>"; };
+		DDFEC9CC8CE980DDE31ED704 /* SecondaryViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryViews.swift; sourceTree = "<group>"; };
+		E62336C5EE6973F4029EF564 /* PracticeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViews.swift; sourceTree = "<group>"; };
+		F705215B079F65651E584EAB /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A1622A2003BF795BB754BF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69FEC2D89748DD76320B6375 /* DomainModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		14E10DAEB7164F004E118432 = {
+			isa = PBXGroup;
+			children = (
+				F28F74D1D48C76742262B9AF /* SATin */,
+				C646855D1915773D5366FC78 /* SATinTests */,
+				FCB5F1254C79BD9A2FDA7FB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33A29B42D652E503E31DA448 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF1451DC360721DEF4A1AFE4 /* DictionaryService.swift */,
+				681C7E15C46A57B4F6007298 /* PDFImportService.swift */,
+				BD205D019EA83782001654F0 /* PracticeScoringService.swift */,
+				F705215B079F65651E584EAB /* TranslationService.swift */,
+				0BD885AB30C3B577F135DEF3 /* VocabularyExporter.swift */,
+				DC16A107B5C5D8F81C09AE34 /* VocabularyRepository.swift */,
+				895360862FC0B6F30062214B /* PracticeSummaryAnalyticsService.swift */,
+				895360882FC0B7200062214B /* QuestionExporter.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8883951ED99FAFA696285052 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6E63600209391156029124E3 /* PracticeSessionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C646855D1915773D5366FC78 /* SATinTests */ = {
+			isa = PBXGroup;
+			children = (
+				334A488BA70F29414ED70C56 /* SATinTests.swift */,
+			);
+			name = SATinTests;
+			path = Tests/SATinTests;
+			sourceTree = "<group>";
+		};
+		D1588A7FCB4B171B32AF86E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0995BF7B3BB1CF9B205C3A6 /* CommonViews.swift */,
+				69F15806E411D96434EC567A /* HomeView.swift */,
+				85C6FCF7AB03C1B1600F3C0A /* LibraryView.swift */,
+				E62336C5EE6973F4029EF564 /* PracticeViews.swift */,
+				5F147FB2E97D7EC69DDCE5DD /* RootContainerView.swift */,
+				DDFEC9CC8CE980DDE31ED704 /* SecondaryViews.swift */,
+				895360842FC085EC0062214B /* ImportReviewView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E00342BA584BF5F1D8157143 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1FB88841270942D554DD3A3 /* offline_dictionary.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F28F74D1D48C76742262B9AF /* SATin */ = {
+			isa = PBXGroup;
+			children = (
+				6D8FBD6EC701A58B3E276846 /* SATinApp.swift */,
+				0A1622A2003BF795BB754BF3 /* Models */,
+				E00342BA584BF5F1D8157143 /* Resources */,
+				33A29B42D652E503E31DA448 /* Services */,
+				8883951ED99FAFA696285052 /* ViewModels */,
+				D1588A7FCB4B171B32AF86E2 /* Views */,
+			);
+			name = SATin;
+			path = Sources/SATin;
+			sourceTree = "<group>";
+		};
+		FCB5F1254C79BD9A2FDA7FB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C465D74E8D2A42361022480C /* SATin.app */,
+				1F8AF698CB12A65896BC39A8 /* SATinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CE36F8785CAA8E741F9BEDF /* SATin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B61412B451FABB2815C79B4C /* Build configuration list for PBXNativeTarget "SATin" */;
+			buildPhases = (
+				9E584D5D4A9F3385F35DA338 /* Sources */,
+				1E0FD569AD4839D5CC2A1399 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SATin;
+			packageProductDependencies = (
+			);
+			productName = SATin;
+			productReference = C465D74E8D2A42361022480C /* SATin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5870C469FC6D5CDD173242B4 /* SATinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ED465499BC7365C0A7DC755 /* Build configuration list for PBXNativeTarget "SATinTests" */;
+			buildPhases = (
+				8B07BE6154A989BABD140915 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F7F5C73E9A44E76CCB1A11F /* PBXTargetDependency */,
+			);
+			name = SATinTests;
+			packageProductDependencies = (
+			);
+			productName = SATinTests;
+			productReference = 1F8AF698CB12A65896BC39A8 /* SATinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2153582FD1C68EA7417BE0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1CE36F8785CAA8E741F9BEDF = {
+						ProvisioningStyle = Automatic;
+					};
+					5870C469FC6D5CDD173242B4 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 341A27ADD8AD56A493F3810F /* Build configuration list for PBXProject "SATin" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 14E10DAEB7164F004E118432;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FCB5F1254C79BD9A2FDA7FB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CE36F8785CAA8E741F9BEDF /* SATin */,
+				5870C469FC6D5CDD173242B4 /* SATinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E0FD569AD4839D5CC2A1399 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C71383EDF12A4F92D758E65 /* offline_dictionary.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B07BE6154A989BABD140915 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4325D18D50A4B348ADE9B28 /* SATinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E584D5D4A9F3385F35DA338 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				895360892FC0B7200062214B /* QuestionExporter.swift in Sources */,
+				E68B3532EA4F59A115E362A9 /* CommonViews.swift in Sources */,
+				68602EE2D1CD11B9C3437039 /* DictionaryService.swift in Sources */,
+				895360872FC0B6F30062214B /* PracticeSummaryAnalyticsService.swift in Sources */,
+				B1B0B62B062152BFF58DAA8F /* DomainModels.swift in Sources */,
+				52C1A7281C3B4810490B24C9 /* HomeView.swift in Sources */,
+				BF2324683FA7DFF2F6A47641 /* LibraryView.swift in Sources */,
+				168D80AEDB585CD48B33251F /* PDFImportService.swift in Sources */,
+				F43E03DB169B7291019D11C1 /* PracticeScoringService.swift in Sources */,
+				4A15139F4A834CEE4EFE9CC4 /* PracticeSessionViewModel.swift in Sources */,
+				8059C0D8554C5687A0D18E2D /* PracticeViews.swift in Sources */,
+				895360852FC085EC0062214B /* ImportReviewView.swift in Sources */,
+				D4600834163D688D35DBC742 /* RootContainerView.swift in Sources */,
+				70137E878FEE1522758E6164 /* SATinApp.swift in Sources */,
+				792E6F93A1D48362CC5351BD /* SecondaryViews.swift in Sources */,
+				19C144FE3C9E25B15EEBDD07 /* TranslationService.swift in Sources */,
+				425C47DA6A0A20DF1FC4C8C9 /* VocabularyExporter.swift in Sources */,
+				1EAFA748B18CFF551AB7DF66 /* VocabularyRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F7F5C73E9A44E76CCB1A11F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CE36F8785CAA8E741F9BEDF /* SATin */;
+			targetProxy = B54E1CF92728C111724B5B0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4712ADFB147ECE7F88247D0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SATin.app/Contents/MacOS/SATin";
+			};
+			name = Debug;
+		};
+		48265ECC58FECD33696AE9A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SATin;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 SATin";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_NAME = SATin;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4FC23867DEDBC68E6D45309E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SATin.app/Contents/MacOS/SATin";
+			};
+			name = Release;
+		};
+		504A3A238C4821314F641FF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.howard.SATin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		66D6C2317C46EE096E027AC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SATin;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 SATin";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_NAME = SATin;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F4FF6B5D85F889B12471A03B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.howard.SATin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		341A27ADD8AD56A493F3810F /* Build configuration list for PBXProject "SATin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				504A3A238C4821314F641FF2 /* Debug */,
+				F4FF6B5D85F889B12471A03B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8ED465499BC7365C0A7DC755 /* Build configuration list for PBXNativeTarget "SATinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4712ADFB147ECE7F88247D0D /* Debug */,
+				4FC23867DEDBC68E6D45309E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B61412B451FABB2815C79B4C /* Build configuration list for PBXNativeTarget "SATin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48265ECC58FECD33696AE9A7 /* Debug */,
+				66D6C2317C46EE096E027AC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2153582FD1C68EA7417BE0D /* Project object */;
+}

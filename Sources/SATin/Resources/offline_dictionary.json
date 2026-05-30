@@ -1,0 +1,17 @@
+{
+  "delicate": {
+    "term": "delicate",
+    "definition": "Easily affected or damaged; requiring careful handling.",
+    "example": "The ecosystem is delicate and can change quickly."
+  },
+  "inference": {
+    "term": "inference",
+    "definition": "A conclusion reached from evidence and reasoning.",
+    "example": "The student made an inference based on the graph."
+  },
+  "synthesis": {
+    "term": "synthesis",
+    "definition": "Combining ideas to form a coherent whole.",
+    "example": "Rhetorical synthesis requires integrating evidence from multiple points."
+  }
+}
