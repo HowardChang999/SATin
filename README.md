@@ -3,10 +3,12 @@
 A local-first macOS app for SAT Reading and Writing practice.
 
 > SATin is an independent third-party application and is not affiliated with, endorsed by, or sponsored by the College Board.
+>
+> SATin is solely a practice shell — it does not host, distribute, or include any copyrighted SAT questions or materials. Users must source their own questions from authorized channels (such as the official College Board question bank). Users are solely responsible for ensuring that any imported content complies with applicable copyright laws and terms of service.
 
 ## Features
 
-- **Import Questions from PDF** — Parse structured SAT practice question sets from PDF files. Review, edit, and manage crops for figure assets before saving.
+- **Import Questions from PDF** — Parse structured SAT practice question sets from PDF files exported from the [College Board Question Bank](https://satsuiteeducatorquestionbank.collegeboard.org/). Review, edit, and manage crops for figure assets before saving.
 - **Practice Sessions** — Filter questions by domain, skill, and difficulty. Timed sessions with answer submission, mistake tracking, and question marking.
 - **Summary & Analytics** — Post-session breakdown including accuracy, speed score, difficulty-weighted score, skill-level analysis, and per-question review.
 - **Vocabulary** — Look up unfamiliar words using the built-in offline dictionary, save them with notes and definitions, and track mastery.
@@ -21,10 +23,28 @@ A local-first macOS app for SAT Reading and Writing practice.
 
 ## Usage
 
-1. **Import questions** — Go to Library, click "Import PDF", and select a SAT Reading and Writing question PDF.
-2. **Start practicing** — Go to Practice, set your filters (domain/skill/difficulty), and begin.
-3. **Review results** — After each session, view your practice score, skill breakdown, and review individual questions.
-4. **Build vocabulary** — Tap any unfamiliar word during practice to look up its definition and save it to your vocabulary list.
+### Getting Questions
+
+SATin does not include any copyrighted questions. You provide your own content by exporting from the official [College Board SAT Question Bank](https://satsuiteeducatorquestionbank.collegeboard.org/).
+
+1. Visit [satsuiteeducatorquestionbank.collegeboard.org](https://satsuiteeducatorquestionbank.collegeboard.org/)
+2. Browse and select questions you want to practice with
+3. Export your selection as a PDF file
+4. In SATin, go to **Library → Import PDF** and select the exported file
+5. Review the parsed questions and save them to your local question bank
+
+### Practicing
+
+1. Go to **Practice**, set filters (domain/skill/difficulty), and begin a session
+2. Answer questions and submit — incorrect answers allow retry or reveal
+3. After each session, view your practice score, skill breakdown, and review individual questions
+4. Use **Practice Mistakes** to retry questions you got wrong
+
+### Vocabulary
+
+- Tap any unfamiliar word during practice to look up its definition
+- Save words with notes to your vocabulary list
+- Track mastery and export vocabulary in CSV, JSON, or Markdown
 
 ### Supported PDF Format
 
@@ -61,6 +81,10 @@ Open `SATin.xcodeproj` in Xcode, or build with Swift Package Manager:
 swift build
 ```
 
-## License
+## Disclaimer & License
 
-This project is for educational and personal study use. Users are responsible for the copyright compliance of any imported question content.
+SATin is an independent third-party application and is **not affiliated with, endorsed by, or sponsored by the College Board**.
+
+SATin is solely a practice shell — it does **not** host, distribute, or include any copyrighted SAT questions or materials. Users must source their own questions from authorized channels (such as the official College Board question bank). Users are solely responsible for ensuring that any imported content complies with applicable copyright laws and terms of service.
+
+This project is for educational and personal study use only.
