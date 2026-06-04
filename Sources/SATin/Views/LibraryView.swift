@@ -36,14 +36,18 @@ struct LibraryView: View {
                 .tint(Color(red: 0.12, green: 0.38, blue: 0.86))
             }
 
-            switch selectedTab {
-            case .questions:
-                QuestionsLibraryPane()
-            case .vocabulary:
-                VocabularyLibraryPane()
-            case .activity:
-                ActivityLibraryPane()
+            ZStack {
+                switch selectedTab {
+                case .questions:
+                    QuestionsLibraryPane()
+                case .vocabulary:
+                    VocabularyLibraryPane()
+                case .activity:
+                    ActivityLibraryPane()
+                }
             }
+            .id(selectedTab)
+            .animation(.spring(response: 0.3, dampingFraction: 0.95), value: selectedTab)
         }
         .padding(24)
         .fileImporter(isPresented: $showImporter, allowedContentTypes: [.pdf], allowsMultipleSelection: false) { result in
@@ -117,7 +121,7 @@ struct QuestionsLibraryPane: View {
 
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 320), spacing: 14)], spacing: 14) {
-                    ForEach(filteredQuestions) { q in
+                    ForEach(Array(filteredQuestions.enumerated()), id: \.element.id) { offset, q in
                         let latest = latestByQuestion[q.questionId]
                         VStack(alignment: .leading, spacing: 12) {
                             HStack {
@@ -142,6 +146,7 @@ struct QuestionsLibraryPane: View {
                         .padding(14)
                         .frame(maxWidth: .infinity, minHeight: 150, alignment: .topLeading)
                         .satinCard()
+                        .satinAppear(Double(offset))
                     }
                 }
             }
@@ -270,7 +275,7 @@ struct VocabularyLibraryPane: View {
 
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 320), spacing: 14)], spacing: 14) {
-                    ForEach(filtered) { word in
+                    ForEach(Array(filtered.enumerated()), id: \.element.id) { offset, word in
                         VStack(alignment: .leading, spacing: 10) {
                             HStack {
                                 Text(word.word)
@@ -291,6 +296,7 @@ struct VocabularyLibraryPane: View {
                         .padding(14)
                         .frame(maxWidth: .infinity, minHeight: 150, alignment: .topLeading)
                         .satinCard()
+                        .satinAppear(Double(offset))
                     }
                 }
             }
@@ -433,7 +439,7 @@ struct ActivityLibraryPane: View {
             VStack(alignment: .leading, spacing: 14) {
                 Text("History").font(.headline)
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 280), spacing: 12)], spacing: 12) {
-                    ForEach(sessions.prefix(20)) { item in
+                    ForEach(Array(sessions.prefix(20).enumerated()), id: \.element.id) { offset, item in
                         let acc = item.questionCount == 0 ? 0 : Int((Double(item.correctCount) / Double(item.questionCount)) * 100)
                         VStack(alignment: .leading, spacing: 8) {
                             Text(item.startedAt.formatted(date: .abbreviated, time: .shortened)).font(.headline)
@@ -445,12 +451,13 @@ struct ActivityLibraryPane: View {
                         .background(Color.white)
                         .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color(red: 0.85, green: 0.88, blue: 0.96), lineWidth: 1))
                         .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .satinAppear(Double(offset))
                     }
                 }
 
                 Text("Mistakes").font(.headline)
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 280), spacing: 12)], spacing: 12) {
-                    ForEach(mistakes.prefix(20)) { m in
+                    ForEach(Array(mistakes.prefix(20).enumerated()), id: \.element.id) { offset, m in
                         HStack {
                             Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(.yellow)
                             VStack(alignment: .leading) {
@@ -464,6 +471,7 @@ struct ActivityLibraryPane: View {
                         .background(Color.white)
                         .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color(red: 0.85, green: 0.88, blue: 0.96), lineWidth: 1))
                         .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .satinAppear(Double(offset + 20))
                     }
                 }
             }

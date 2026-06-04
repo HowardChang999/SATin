@@ -39,11 +39,15 @@ struct RootContainerView: View {
             .navigationSplitViewColumnWidth(min: 180, ideal: 210, max: 260)
         } detail: {
             NavigationStack {
-                detailView(for: selection ?? .home)
-                    .navigationTitle((selection ?? .home).rawValue)
-                    .toolbarTitleDisplayMode(.inline)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(SATinStyle.pageBackground)
+                ZStack {
+                    detailView(for: selection ?? .home)
+                        .navigationTitle((selection ?? .home).rawValue)
+                        .toolbarTitleDisplayMode(.inline)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(SATinStyle.pageBackground)
+                        .id(selection ?? .home)
+                }
+                .animation(.spring(response: 0.3, dampingFraction: 0.95), value: selection)
             }
         }
         .onAppear { showDisclaimer = !hasShownDisclaimer }
@@ -98,9 +102,9 @@ private struct HomeHubView: View {
                 }
 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 180), spacing: 12)], spacing: 12) {
-                    PlaceholderCard(title: "Days Left", value: "\(daysLeft)")
-                    PlaceholderCard(title: "Questions Practiced", value: "\(totalQuestions)")
-                    PlaceholderCard(title: "Accuracy", value: "\(accuracy)%")
+                    PlaceholderCard(title: "Days Left", value: "\(daysLeft)", index: 0)
+                    PlaceholderCard(title: "Questions Practiced", value: "\(totalQuestions)", index: 1)
+                    PlaceholderCard(title: "Accuracy", value: "\(accuracy)%", index: 2)
                 }
 
                 HStack(alignment: .top, spacing: 12) {
@@ -108,23 +112,29 @@ private struct HomeHubView: View {
                         title: "Practice",
                         subtitle: "Start a focused session",
                         icon: "play.circle.fill",
-                        actionText: "Start Practice"
+                        actionText: "Start Practice",
+                        index: 3
                     ) { selection = .practice }
 
                     launchCard(
                         title: "Library",
                         subtitle: "Import, filter, and export questions",
                         icon: "books.vertical.fill",
-                        actionText: "Open Library"
+                        actionText: "Open Library",
+                        index: 4
                     ) { selection = .library }
                 }
 
                 VStack(alignment: .leading, spacing: 8) {
                     Text("More")
                         .font(.headline)
+                        .satinAppear(5)
                     quickNav("About SAT", icon: "graduationcap") { selection = .aboutSAT }
+                        .satinAppear(6)
                     quickNav("About SATin", icon: "sparkles") { selection = .satin }
+                        .satinAppear(7)
                     quickNav("Settings", icon: "gearshape") { selection = .settings }
+                        .satinAppear(8)
                 }
                 .padding(14)
                 .satinPanel()
@@ -138,7 +148,7 @@ private struct HomeHubView: View {
         }
     }
 
-    private func launchCard(title: String, subtitle: String, icon: String, actionText: String, action: @escaping () -> Void) -> some View {
+    private func launchCard(title: String, subtitle: String, icon: String, actionText: String, index: Double = 0, action: @escaping () -> Void) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             Image(systemName: icon)
                 .font(.system(size: 28, weight: .semibold))
@@ -159,6 +169,7 @@ private struct HomeHubView: View {
         .padding(16)
         .frame(maxWidth: .infinity, minHeight: 210, alignment: .topLeading)
         .satinCard()
+        .satinAppear(index)
     }
 
     private func quickNav(_ title: String, icon: String, action: @escaping () -> Void) -> some View {
@@ -176,5 +187,6 @@ private struct HomeHubView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .satinPress()
     }
 }
