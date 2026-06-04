@@ -30,26 +30,33 @@ struct PracticeContainerView: View {
     @State private var questionFinishedAt: Date?
 
     var body: some View {
-        if showSummaryAfterEnd {
-            PracticeSummaryView(session: session, attempts: liveAttempts, questions: filteredQuestions) { questionIds in
-                startMistakePractice(questionIds: questionIds)
-            }
-                .overlay(alignment: .topLeading) {
-                    Button {
-                        showSummaryAfterEnd = false
-                        hasStarted = false
-                        retryQuestionIds = nil
-                    } label: {
-                        Label("Back to Setup", systemImage: "chevron.left")
-                    }
-                    .buttonStyle(.bordered)
-                    .padding(24)
+        ZStack {
+            if showSummaryAfterEnd {
+                PracticeSummaryView(session: session, attempts: liveAttempts, questions: filteredQuestions) { questionIds in
+                    startMistakePractice(questionIds: questionIds)
                 }
-        } else if hasStarted {
-            practiceRunner
-        } else {
-            filterView
+                    .overlay(alignment: .topLeading) {
+                        Button {
+                            showSummaryAfterEnd = false
+                            hasStarted = false
+                            retryQuestionIds = nil
+                        } label: {
+                            Label("Back to Setup", systemImage: "chevron.left")
+                        }
+                        .buttonStyle(.bordered)
+                        .padding(24)
+                    }
+                    .transition(.opacity)
+            } else if hasStarted {
+                practiceRunner
+                    .transition(.opacity.combined(with: .scale(scale: 0.97)))
+            } else {
+                filterView
+                    .transition(.opacity.combined(with: .scale(scale: 0.97)))
+            }
         }
+        .animation(.spring(response: 0.3, dampingFraction: 0.95), value: hasStarted)
+        .animation(.spring(response: 0.3, dampingFraction: 0.95), value: showSummaryAfterEnd)
     }
 
     private var filteredQuestions: [Question] {
@@ -287,6 +294,7 @@ struct PracticeContainerView: View {
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
         .buttonStyle(.plain)
+        .satinPress()
     }
 
     private func buttonBackground(for letter: String) -> Color {
@@ -454,17 +462,17 @@ struct PracticeSummaryView: View {
                 }
 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 190), spacing: 12)], spacing: 12) {
-                    PlaceholderCard(title: "Total Questions", value: "\(session.questionCount)")
-                    PlaceholderCard(title: "Correct Answers", value: "\(session.correctCount)")
-                    PlaceholderCard(title: "Accuracy", value: String(format: "%.1f%%", accuracy))
-                    PlaceholderCard(title: "Practice Score", value: String(format: "%.1f", scoring.finalScore))
-                    PlaceholderCard(title: "Marked", value: "\(analytics.marked.total)")
-                    PlaceholderCard(title: "Marked Rate", value: String(format: "%.1f%%", analytics.marked.rate))
+                    PlaceholderCard(title: "Total Questions", value: "\(session.questionCount)", index: 0)
+                    PlaceholderCard(title: "Correct Answers", value: "\(session.correctCount)", index: 1)
+                    PlaceholderCard(title: "Accuracy", value: String(format: "%.1f%%", accuracy), index: 2)
+                    PlaceholderCard(title: "Practice Score", value: String(format: "%.1f", scoring.finalScore), index: 3)
+                    PlaceholderCard(title: "Marked", value: "\(analytics.marked.total)", index: 4)
+                    PlaceholderCard(title: "Marked Rate", value: String(format: "%.1f%%", analytics.marked.rate), index: 5)
                 }
 
                 HStack(spacing: 12) {
-                    PlaceholderCard(title: "Marked Correct", value: "\(analytics.marked.correct)")
-                    PlaceholderCard(title: "Marked Incorrect", value: "\(analytics.marked.incorrect)")
+                    PlaceholderCard(title: "Marked Correct", value: "\(analytics.marked.correct)", index: 6)
+                    PlaceholderCard(title: "Marked Incorrect", value: "\(analytics.marked.incorrect)", index: 7)
                 }
 
                 VStack(alignment: .leading, spacing: 12) {
@@ -481,6 +489,7 @@ struct PracticeSummaryView: View {
                 }
                 .padding(14)
                 .satinCard()
+                .satinAppear(8)
 
                 VStack(spacing: 8) {
                     HStack {
@@ -492,8 +501,9 @@ struct PracticeSummaryView: View {
                         Text("No attempted skills in this session.")
                             .foregroundStyle(.secondary)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .satinAppear(9)
                     } else {
-                        ForEach(analytics.skillBreakdown) { item in
+                        ForEach(Array(analytics.skillBreakdown.enumerated()), id: \.element.id) { offset, item in
                             HStack {
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(item.skill.rawValue).font(.headline)
@@ -514,6 +524,7 @@ struct PracticeSummaryView: View {
                             }
                             .padding(12)
                             .satinCard()
+                            .satinAppear(Double(offset + 9))
                         }
                     }
                 }
@@ -524,7 +535,7 @@ struct PracticeSummaryView: View {
                             .font(.headline)
                         Spacer()
                     }
-                    ForEach(analytics.reviewItems) { item in
+                    ForEach(Array(analytics.reviewItems.enumerated()), id: \.element.id) { offset, item in
                         Button {
                             selectedReviewItem = item
                         } label: {
@@ -555,6 +566,7 @@ struct PracticeSummaryView: View {
                         }
                         .buttonStyle(.plain)
                         .satinCard()
+                        .satinAppear(Double(analytics.skillBreakdown.count + 10 + offset))
                     }
                 }
             }
