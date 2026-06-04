@@ -51,11 +51,33 @@ struct SATinAboutView: View {
                 InfoSection(title: "SATin", icon: "sparkles") {
                     Text("SATin is a local-first SAT Reading and Writing practice app with your own imported question sets.")
                 }
-                InfoSection(title: "Privacy", icon: "lock") {
-                    Text("All data is stored locally on your Mac.")
+
+                InfoSection(title: "How to Get Questions", icon: "questionmark.folder") {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("SATin does not include any copyrighted questions. You provide your own content:")
+                        Group {
+                            Text("1. Visit the College Board SAT Question Bank:")
+                            Link("satsuiteeducatorquestionbank.collegeboard.org",
+                                 destination: URL(string: "https://satsuiteeducatorquestionbank.collegeboard.org")!)
+                                .font(.body)
+                            Text("2. Browse and select questions you want to practice with.")
+                            Text("3. Export your selection as a PDF file.")
+                            Text("4. In SATin, go to Library → Import PDF and select the exported file.")
+                            Text("5. Review the parsed questions and save them to your local question bank.")
+                        }
+                        .foregroundStyle(.secondary)
+                    }
                 }
+
+                InfoSection(title: "Privacy", icon: "lock") {
+                    Text("All data is stored locally on your Mac. No data is sent to any server.")
+                }
+
                 InfoSection(title: "Disclaimer", icon: "info.circle") {
-                    Text("SATin is an independent third-party application and is not affiliated with, endorsed by, or sponsored by the College Board.")
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("SATin is an independent third-party application and is not affiliated with, endorsed by, or sponsored by the College Board.")
+                        Text("SATin is solely a practice shell — it does not host, distribute, or include any copyrighted SAT questions or materials. Users must source their own questions from authorized channels (such as the official College Board question bank). Users are solely responsible for ensuring that any imported content complies with applicable copyright laws and terms of service.")
+                    }
                 }
             }
             .padding(24)
